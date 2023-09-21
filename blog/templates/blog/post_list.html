@@ -9,16 +9,13 @@
             </h1>
         </div>
 
-        <div>
-            <p>publicado: 21/09/2023, não interessa a hora vacilão</p>
-            <h2><a href="">Meu primeiro post</a></h2>
-            <p>sla qualquer coisa</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>publicado: 21/09/2023</p>
-            <h2><a href="">Criei um site</a></h2>
-            <p>venci na vida</p>
-        </div>
     </body>
 </html>
